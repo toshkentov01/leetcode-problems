@@ -13,5 +13,5 @@ func FindTheDifference(s string, t string) byte {
         sumT += int(data)
     }
     
-    return byte(rune(sumT - sumS))
+    return byte(sumT - sumS)
 }

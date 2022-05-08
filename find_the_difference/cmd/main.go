@@ -9,6 +9,6 @@ func main() {
 	result := source.FindTheDifference("abcd", "abcde")
 	fmt.Println("First Result: ", string(result)) // e
 
-	result = source.FindTheDifference("a", "aa")
+	result = source.FindTheDifference("aa", "aab")
 	fmt.Println("Second Result: ", string(result)) // a
 }
