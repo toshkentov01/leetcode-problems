@@ -30,11 +30,10 @@ func addMinimum(word string) int {
 }
 
 func extraCount(letter byte) int {
-	if letter == 'a' {
+	switch letter {
+	case 'a':
 		return 2
-	}
-
-	if letter == 'b' {
+	case 'b':
 		return 1
 	}
 
