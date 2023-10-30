@@ -1,17 +1,17 @@
 package source 
 
 func MajorityElement(nums []int) int {
-    hashMap := make(map[int]int)
-     
-    for _, num := range nums {
-        hashMap[num] += 1
+    nMap := make(map[int]int)
+
+    for i := range nums {
+        nMap[nums[i]]++
     }
-    
-    for key, value := range hashMap {
-        if value > len(nums) / 2 {
+
+    for key, value := range nMap {
+        if value > (len(nums)/2) {
             return key
         }
     }
-                               
+
     return 0
 }
