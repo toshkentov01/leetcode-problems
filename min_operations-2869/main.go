@@ -4,9 +4,7 @@ func minOperations(nums []int, k int) int {
 	numMap := make(map[int]struct{})
 
 	for i := len(nums) - 1; i >= 0; i-- {
-		_, ok := numMap[nums[i]]
-
-		if !ok && nums[i] <= k {
+		if _, ok := numMap[nums[i]]; !ok && nums[i] <= k {
 			numMap[nums[i]] = struct{}{}
 		}
 
