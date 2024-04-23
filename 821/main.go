@@ -16,12 +16,12 @@ func shortestToChar(s string, c byte) []int {
 	var (
 		counter        int
 		lastEqualIndex int
-		flag           bool
+		equalFound     bool
 	)
 
 	for i := range s {
 		if s[i] != c {
-			if !flag {
+			if !equalFound {
 				result[i] = indexSlice[counter] - i
 				continue
 			}
@@ -41,7 +41,7 @@ func shortestToChar(s string, c byte) []int {
 		}
 
 		lastEqualIndex = i
-		flag = true
+		equalFound = true
 		result[i] = 0
 
 		if counter+1 != len(indexSlice) {
